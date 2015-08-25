@@ -16,7 +16,7 @@ You can do this via **System Preferences/Advanced Settings**<br/><br/>
 
 *Example*
 
-<img src="http://fs2.directupload.net/images/150825/jli4zbww.png" width="550" height="500">
+<img src="http://fs2.directupload.net/images/150825/jli4zbww.png" width="800" height="650">
 
 *License*<br/>
 MIT
