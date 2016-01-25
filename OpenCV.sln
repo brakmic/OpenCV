@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterRecognition", "CharacterRecognition\CharacterRecognition.csproj", "{B54CDC3D-1676-4929-9644-42E77656FCB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{9457EC4F-F7E5-4E70-9711-CD563C86E2FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterRecognition2", "CharacterRecognition2\CharacterRecognition2.csproj", "{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +25,20 @@ Global
 		{B54CDC3D-1676-4929-9644-42E77656FCB6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B54CDC3D-1676-4929-9644-42E77656FCB6}.Release|x64.ActiveCfg = Release|x64
 		{B54CDC3D-1676-4929-9644-42E77656FCB6}.Release|x64.Build.0 = Release|x64
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}.Debug|x64.Build.0 = Debug|Any CPU
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}.Release|x64.ActiveCfg = Release|Any CPU
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B54CDC3D-1676-4929-9644-42E77656FCB6} = {9457EC4F-F7E5-4E70-9711-CD563C86E2FF}
+		{DAA7FEFF-B3F1-402D-A37B-B0361AE0761D} = {9457EC4F-F7E5-4E70-9711-CD563C86E2FF}
 	EndGlobalSection
 EndGlobal
