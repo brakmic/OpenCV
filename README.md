@@ -18,8 +18,14 @@ You can do this via **System Preferences/Advanced Settings**<br/><br/>
 
 <img src="http://fs2.directupload.net/images/150825/jli4zbww.png" width="800" height="650">
 
-*License*<br/>
-MIT
+*There's a second app which is currently in development. No real OCR there, only a few tests with loading images and (de)serializing them.*
+
+<img src="http://fs5.directupload.net/images/160125/abupzd6q.png" />
+
+*License*
+
+
+<a href="https://github.com/brakmic/OpenCV/blob/master/LICENSE">MIT</a>
 
 
 
