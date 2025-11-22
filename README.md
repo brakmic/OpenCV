@@ -1,31 +1,78 @@
-# OpenCV Demos
+# OpenCV Character Recognition
 
-**Character Recognition**
+A Windows Forms application for OCR text extraction from images using [EmguCV](https://github.com/emgucv/emgucv) and [Tesseract](https://github.com/tesseract-ocr).
 
-*Environment Setup*
+## About This Project
 
-* Download & Install <a href="http://opencv.org/downloads.html" target="_blank">OpenCV 3.0.0</a><br/>
-* Download & Install EmguCV, the OpenCV wrapper libs for .NET, from <a href="http://sourceforge.net/projects/emgucv/files/" target="_blank">here</a>.<br/>
-* Set a system-wide variable pointing to the EmguCV install dir, for example <br/><br/>``` EMGU_ROOT=C:\bin\Emgu```<br/><br/>
-You can do this via **System Preferences/Advanced Settings**<br/><br/>
-* Expand the variable *PATH*, which is in the same settings window, with <br/><br/>```%EMGU_ROOT%\bin\x64```<br/>
-<br/>This entry is needed because the app will automatically search for **cvextern.dll** located in this directory.<br/><br/>
-* Open the solution file and start the app (Notice: *this is an x64 app*)<br/>
-* Load one of the available images from the **Assets** folder (these are simple invoice documents)<br/>
-* Click on Analyze and wait for the OCR-task to complete. <br/>
+This project was originally created ten years ago and remained unchanged since then. In 2025 I decided to modernize it and remove the cumbersome manual EmguCV/OpenCV installation process. The new version uses NuGet packages instead, making setup much simpler.
 
-*Example*
+## Features
 
-<img src="http://fs2.directupload.net/images/150825/jli4zbww.png" width="800" height="650">
+- OCR text extraction from images
+- Support for multiple image formats (JPG, PNG, GIF, BMP)
+- Modern async/await patterns for responsive UI
+- No manual environment setup required
+- All dependencies managed through NuGet
 
-*There's a second app which is currently in development. No real OCR there, only a few tests with loading images and (de)serializing them.*
+## Requirements
 
-<img src="http://fs5.directupload.net/images/160125/abupzd6q.png" />
+- Windows 10 or later
+- .NET 10 SDK
+- Visual Studio 2022 or VS Code with C# Dev Kit
 
-*License*
+## Setup
 
+No manual environment configuration needed. The build process automatically downloads required Tesseract language data.
 
-<a href="https://github.com/brakmic/OpenCV/blob/master/LICENSE">MIT</a>
+```bash
+git clone https://github.com/brakmic/OpenCV.git
+cd OpenCV
+dotnet build
+```
+
+The first build will download tessdata files automatically.
+
+### Additional Languages
+
+By default, only English language data is downloaded. To use other languages, download them manually using the provided script.
+
+Example for German:
+
+```bash
+pwsh -ExecutionPolicy Bypass -File scripts/Download-Tessdata.ps1 -TessdataPath CharacterRecognition/tessdata -Language deu
+```
+
+Then update the `Language` property in `CharacterRecognition/appsettings.json` to match your chosen language code.
+
+Available language codes: `eng`, `deu`, `fra`, `spa`, `ita`, `por`, and [many more](https://github.com/tesseract-ocr/tessdata).
+
+## Running the Application
+
+```bash
+dotnet run --project CharacterRecognition/CharacterRecognition.csproj
+```
+
+Or open `OpenCV.sln` in Visual Studio and press F5.
+
+## Usage
+
+1. Start the application
+2. Load one of the sample images from the **Assets** folder (these are invoice documents)
+3. Click on **Analyze** and wait for the OCR task to complete
+4. View the extracted text in the result window
+
+![OCR Application in Action](img/pfandbeleg.png)
+
+## Technical Details
+
+- **Framework**: .NET 10
+- **UI**: Windows Forms
+- **OCR Engine**: Tesseract 4 via EmguCV 4.12
+- **Architecture**: x64
+
+## License
+
+[MIT](LICENSE)
 
 
 

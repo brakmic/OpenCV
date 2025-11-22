@@ -1,4 +1,4 @@
-﻿namespace CharacterRecognition
+﻿namespace OcrApp.Forms
 {
     partial class MainWnd
     {
